@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(172, 254, 216);
+}
+h1{
+    color: rgb(70, 69, 69);
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+.box{
+    background-color: rgb(247, 247, 175);
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center;
+}
