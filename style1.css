@@ -12,3 +12,10 @@ h1{
     border: 2px solid black;
     text-align: center;
 }
+.divBox{
+    background-color: rgb(177, 247, 156);
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center;   
+}
