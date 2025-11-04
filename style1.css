@@ -1,5 +1,6 @@
 body{
-    background-color: rgb(172, 254, 216);
+    background-color: rgb(246, 186, 234);
+    text-align: center;
 }
 h1{
     color: rgb(70, 69, 69);
@@ -17,5 +18,37 @@ h1{
     width: 200px;
     height: 200px;
     border: 2px solid black;
-    text-align: center;   
+}
+.newdivbox{
+    border-radius: 20%;
+}
+
+.boxcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.eventbtn{
+    height: 60px;
+    border-radius: 30%;
+    background-color: rgb(23, 250, 7);
+    border:none;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.eventbtn:hover{
+    transform: scale(1.1);
+    background-color:  rgb(160, 245, 157);
+}
+
+#eventbtn1{
+    margin:50px;
+}
+.light{
+    background-color:  rgb(246, 186, 234);
+    color: black;
+}
+.dark{
+    background-color: rgb(29, 1, 29);
+    color: white;
 }
