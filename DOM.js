@@ -47,8 +47,8 @@ console.dir(box_with_id1);
 let box_with_id2 = document.querySelector("#boxnum2");
 console.dir(box_with_id2);
 
-// let box_with_class = document.querySelectorAll(".box");
-// console.dir(box_with_class);
+let box_with_class = document.querySelectorAll(".box");
+console.dir(box_with_class);
 
 // innerText -> gives the text value inside, tag and its children
 console.log(box_with_id1.innerText);
@@ -57,7 +57,7 @@ console.log(box_with_id1.innerText);
 let headingtag1 = document.querySelector("h1");
 headingtag1.innerHTML = "<i>Java Script from Scratch</i>";
 console.log(headingtag1.getAttribute("class"));                         // getattribute and setattribute
-console.log(headingtag1.setAttribute("class", "newheadingclass"));      // sets class name to new name
+console.log(headingtag1.setAttribute("class", "newheadingclass"));      // overwrites existing class with new class
 
 // Practice -> create 3 divs with common class divBox and access them in js and add a unique name for all div
 let divbox_list  = document.querySelectorAll(".divBox");

@@ -9,9 +9,9 @@ eventButton.onclick = () => {
 }
 // event: mousehover
 let boxupper = document.querySelector(".box");
-// boxupper.onmouseover = () => {
-//     console.log("The box was hovered");
-// }
+boxupper.onmouseover = () => {
+    console.log("The box was hovered");
+}
 
 // event listeners.... where multiple function can implement on same element(div/btn etc)function
 boxupper.addEventListener("dblclick", () => {             // can pass the entire function
@@ -28,17 +28,22 @@ boxupper.addEventListener("mouseover", funPrint);        // can pass the functio
 // dark light mode toggle
 let modebtn = document.querySelector("#eventbtn1");
 let mainBody = document.querySelector("body");
+let welcomePara = document.querySelector(".welcomepara");
+
 theme = "light";
 const theme_function = () => {
     if( theme === "light"){
         theme = "dark";
         mainBody.classList.remove("light");
         mainBody.classList.add("dark");
+        welcomePara.innerText = "Dark mode";
+
     }
     else{
         theme = "light";
         mainBody.classList.remove("dark");
         mainBody.classList.add("light");
+        welcomePara.innerText = "Light mode";
     }
 }
 modebtn.addEventListener("click", theme_function);
