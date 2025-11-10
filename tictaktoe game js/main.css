@@ -1,0 +1,64 @@
+body{
+    background-color:#ecf39e ;
+    color:#153e15;
+    text-align: center;
+}
+h1{
+    color: #153e15;
+}
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.container{
+    background-color: #90a955;
+    border-radius: 20px; 
+    padding: 20px; 
+
+} 
+.playbox{
+    background-color: #4f772d;
+    width:60vh;
+    height:60vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    gap: 1rem;
+    padding: 15px;
+}
+.box{
+    background-color: #ecf39e;
+    color:#153e15;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    box-shadow: 0 0 1rem rgb(161, 255, 161);
+    text-align: center;
+    font-size: 13vmin;
+    border: none;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.resetbtn, .playbtn{
+    background-color:#153e15;
+    width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 0 1rem rgb(55, 56, 55);
+    color: white;
+    margin-top: 30px;
+    font-size: 15px;
+}
+.hidedisplay{
+    display: none;
+}
+.winnerdisp{
+    height: 100vh;
+    width: auto;
+    color: black;
+    font-size: 40px;
+}
+
