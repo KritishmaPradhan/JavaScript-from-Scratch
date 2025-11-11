@@ -1,6 +1,6 @@
 let boxes = document.querySelectorAll(".box");
 let resetbtn = document.querySelector(".resetbtn");
-let winnerPlayer = document.querySelector(".winner_player");
+let winnerPlayer = document.querySelector("#winner_player");
 let winnerDisp = document.querySelector(".winnerdisp");
 let playBtn = document.querySelector(".playbtn");
 
@@ -32,14 +32,23 @@ boxes.forEach((box) => {
 });
 
 const clearboxes = () => {
+    turnX = true;
     boxes.forEach((box) => {
         box.innerText = "";
+        box.disabled = false;
+    });
+    winnerDisp.classList.add("hidedisplay");
+}
+const disableboxes = () => {
+    boxes.forEach((box) => {
+        box.disabled = true;
     });
 }
 
 const winnerdisplay = (winner) =>{
     winnerDisp.classList.remove("hidedisplay");
     winnerPlayer.innerText = `The winner is ${winner}`;
+    disableboxes();
 }
 const winCheck = () =>{
     for(let pattern of winningPattern){
@@ -50,8 +59,9 @@ const winCheck = () =>{
         if (boxPos1 != "" && boxPos2 != ""  && boxPox3 != ""){
             if(boxPos1 === boxPos2 && boxPos2 === boxPox3){
                 winnerdisplay(boxPos1);
-
             }
         }
     }
 };
+playBtn.addEventListener("click",clearboxes);
+resetbtn.addEventListener("click", clearboxes);
