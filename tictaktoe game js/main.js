@@ -49,6 +49,7 @@ const winnerdisplay = (winner) =>{
     winnerDisp.classList.remove("hidedisplay");
     winnerPlayer.innerText = `The winner is ${winner}`;
     disableboxes();
+    generateConfetti();
 }
 const winCheck = () =>{
     for(let pattern of winningPattern){
@@ -65,3 +66,32 @@ const winCheck = () =>{
 };
 playBtn.addEventListener("click",clearboxes);
 resetbtn.addEventListener("click", clearboxes);
+
+
+// additional animations and confetti
+function generateConfetti() {
+        const confettiContainer = document.getElementById('confetti');
+        for (let i = 0; i < 100; i++) {
+            const confettiPiece = document.createElement('div');
+            confettiPiece.classList.add('confetti-piece');
+            // confettiPiece.style.backgroundColor = `hsl(${Math.random() * 60 + 90}, 100%, 50%)`;
+            let hue;
+            // 50% chance green, 50% chance whitish-yellow
+            if (Math.random() < 0.5) {
+              // Green shades (90–150)
+              hue = Math.random() * 60 + 90;
+            } else {
+              // Whitish-yellow shades (40–60)
+              hue = Math.random() * 20 + 40;
+            }
+            confettiPiece.style.backgroundColor = `hsl(${hue}, 100%, ${Math.random() * 20 + 70}%)`;
+            confettiPiece.style.left = `${Math.random() * window.innerWidth}px`;
+            confettiPiece.style.animationDuration = `${Math.random() * 2 + 2}s`; // Random speed
+            confettiPiece.style.animationDelay = `${Math.random() * 1}s`; // Random delay               
+            confettiContainer.appendChild(confettiPiece);               
+            // Remove confetti after animation ends
+            setTimeout(() => {
+                confettiPiece.remove();
+            }, 2000);
+        }
+    }

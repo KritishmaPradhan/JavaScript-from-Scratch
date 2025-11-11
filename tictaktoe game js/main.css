@@ -83,3 +83,29 @@ h1{
     }
 }
 
+/* confetti and extra animations */
+#confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    }
+
+.confetti-piece {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    animation: confettiAnimation 2s ease-out infinite;
+    }
+    
+@keyframes confettiAnimation {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(1000px) rotate(180deg);
+    }
+}
+
+
