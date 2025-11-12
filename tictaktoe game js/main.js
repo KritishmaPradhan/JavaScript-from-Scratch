@@ -3,6 +3,8 @@ let resetbtn = document.querySelector(".resetbtn");
 let winnerPlayer = document.querySelector("#winner_player");
 let winnerDisp = document.querySelector(".winnerdisp");
 let playBtn = document.querySelector(".playbtn");
+let themeBtn = document.querySelector("#ToggleThemeBtn");
+let bgVideoid = document.querySelector("#backgndVid");
 
 turnX = true;
 const winningPattern = [
@@ -89,9 +91,23 @@ function generateConfetti() {
             confettiPiece.style.animationDuration = `${Math.random() * 2 + 2}s`; // Random speed
             confettiPiece.style.animationDelay = `${Math.random() * 1}s`; // Random delay               
             confettiContainer.appendChild(confettiPiece);               
-            // Remove confetti after animation ends
             setTimeout(() => {
                 confettiPiece.remove();
             }, 2000);
         }
     }
+
+// backgroung theme toggle function
+const themeOptions = [
+    "videos/purplemesh.mp4",
+    "videos/earth.mp4",
+    "videos/galaxyforgame.mp4",
+    "videos/technology.mp4"
+];
+let currentIndex = 0;
+themeBtn.addEventListener("click", () =>{
+    currentIndex = (currentIndex + 1 ) % themeOptions.length;
+    bgVideoid.src = themeOptions[currentIndex];
+    bgVideoid.load();
+    bgVideoid.play();
+});

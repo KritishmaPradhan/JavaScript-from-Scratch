@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe Game</title>
     <link rel = "stylesheet" href = "main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <video class="back-vid" autoplay loop muted plays-inline src="galaxyforgame.mp4"></video>
+    <video class="back-vid" id = "backgndVid" autoplay loop muted plays-inline src="videos/technology.mp4"></video>
     <div id="confetti"></div>
     <div class="winnerdisp hidedisplay ">
         <p id = "winner_player"></p>
         <button class = "playbtn">Play again</button>
     </div>
     <h1>Tic Tac Toe</h1>
+    <button id="ToggleThemeBtn">
+      <i class="fa fa-spinner" aria-hidden="true"></i>
+    </button>
     <div class="maincontainer">
         <div class="container">
             <div class="playbox">
